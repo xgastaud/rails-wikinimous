@@ -1,0 +1,22 @@
+<!-- <h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p> -->
+<div class="navbar">
+<h2><%= link_to "Wikinimous", articles_path %></h2>
+<h3><%= link_to "New article", new_article_path %></h2>
+</div>
+<div class="container">
+  <% @articles.each do |article| %>
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="article-title">
+          <%#= article[:title] %>
+          <%= link_to article[:title], article_path(article) %>
+        </div>
+        <div class=article-content>
+          <%= article[:content] %>
+        </div>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

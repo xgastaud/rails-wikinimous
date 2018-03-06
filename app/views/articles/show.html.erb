@@ -1,0 +1,17 @@
+<!-- <h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p> -->
+<div class="navbar">
+  <h2><%= link_to "Wikinimous", articles_path %></h2>
+  <h3><%= link_to "New article", new_article_path %></h2>
+</div>
+<div>
+  <div class="article-title">
+    <%= @article[:title] %>
+    <%= link_to "Edit", edit_article_path(@article) %>
+    <%= link_to "Delete", article_path(@article), method: :delete,
+        data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
+<div class="article-content">
+  <%= @article[:content] %>
+</div>
